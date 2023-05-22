@@ -45,6 +45,13 @@ This will start frontend server at http://localhost:5173.
 
 Enjoy using the app.
 
+### Test
 
+```bash
+# first start dev server
+$ yarn dev
 
+# then open  cypress app, there you can select desired test to run
+$ yarn run cypress:open
+```
 

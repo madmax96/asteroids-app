@@ -14,7 +14,7 @@ import { getFavouriteAsteroids, useAsteroidsFeed } from "../services/asteroids";
 
 const CURRENT_DATE = dayjs();
 
-const HomePage = () => {
+const IndexPage = () => {
   const [startDate, setStartDate] = useState<Dayjs>(CURRENT_DATE);
   const [endDate, setEndDate] = useState<Dayjs>(startDate.add(7, "days"));
   const [showAllFavourites, setShowAllFavourites] = useState<boolean>(false);
@@ -77,6 +77,7 @@ const HomePage = () => {
             onChange={() =>
               setShowAllFavourites((showAllFavourites) => !showAllFavourites)
             }
+            data-test-id="show-all-favourites-switch"
           />
         }
         label="Show All Favourites"
@@ -97,4 +98,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default IndexPage;
